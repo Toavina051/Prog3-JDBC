@@ -10,6 +10,7 @@ public class TestConnection {
 
         try (
             Connection con = DriverManager.getConnection(url, user, password)){
+            con.close();
             System.out.println("Connected !");
         } catch (SQLException e) {
             System.out.println("Error: " + e.getMessage());
